@@ -7,9 +7,10 @@ public class AssertTest {
 
     @Test
     public void test(){
-        Assert.assertTrue(true);
-        Assert.assertFalse(false);
-        Assert.assertEquals(2,2);
-        Assert.assertEquals(0.52,0.52,0.01);
+        Assert.assertTrue(true); // Recebe boolean e valida se é verdadeiro, caso não, retorna erro.
+        Assert.assertFalse(false); // Recebe boolean e valida se é falso, caso não, retorna erro.
+        Assert.assertEquals(2,2); // Compara dois valores, caso sejam diferentes retorna erro.
+        Assert.assertEquals(0.52,0.52,0.01); // Exemplo com float, tendo  que determinar o delta para a quantidade de  casa decimais a serem  consideradas.
+
     }
 }
