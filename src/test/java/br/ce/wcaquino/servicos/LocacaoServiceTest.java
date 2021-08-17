@@ -3,7 +3,6 @@ package br.ce.wcaquino.servicos;
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
 import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoService;
 import br.ce.wcaquino.utils.DataUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,7 +26,8 @@ public class LocacaoServiceTest{
 
         //verificação
 
-        Assert.assertTrue(locacao.getValor() == 5.0);
+        //Inverter a ordem de valor esperado e valor  atual não impede de executar o teste, porém atrpalha em identificar a divergência.
+        Assert.assertEquals(5.0, locacao.getValor(), 0.01);
         Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
         Assert.assertTrue(DataUtils.isMesmaData(DataUtils.obterDataComDiferencaDias(1), locacao.getDataRetorno()));
 
